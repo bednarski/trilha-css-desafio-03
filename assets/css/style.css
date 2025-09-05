@@ -1,0 +1,177 @@
+/*-------------------------------------------------
+=  Table of Css
+
+Reset
+1.Bloco navbar
+2.Bloco aside
+3.Bloco Main
+
+-------------------------------------------------*/
+/*-------------------------------------------------*/
+/* =  Reset
+/*-------------------------------------------------*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+        "navbar navbar navbar navbar navbar navbar"
+        "aside main main main main main";
+    grid-template-rows: auto;
+    background-color: rgba(249, 249, 249, 1);
+
+}
+
+/*-------------------------------------------------*/
+/* =  1.Bloco navbar
+/*-------------------------------------------------*/
+.navbar {
+    display: flex;
+    grid-area: navbar;
+    height: 60px;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;    
+    background-color: rgba(255, 255, 255, 2);
+}
+/*-------------------------------------------------*/
+/* =  Ícones
+/*-------------------------------------------------*/
+.esquerdo,
+.direito {
+    padding: 18px 25px;
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.esquerdo .menu {
+    background: none;
+    border: none;
+}
+
+.esquerdo .logo .small {
+    display: none;
+}
+
+.esquerdo .logo .medium {
+    display: block;
+}
+
+/*-------------------------------------------------*/
+/* =  Input Busca
+/*-------------------------------------------------*/
+.busca {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #CCCCCC;
+}
+
+.busca input[type=search] {
+    width: 350px;
+    height: 42px;
+    padding: 12px;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 24px;
+}
+
+.busca button {
+    width: 57px;
+    height: 40px;
+    background: #F8F8F8;
+    border: none;
+    border-left: 1px solid #CCCCCC;
+}
+
+.btn-search {
+    display: none;
+}
+
+/*-------------------------------------------------*/
+/* =  2.Bloco aside
+/*-------------------------------------------------*/
+aside {
+    padding: 24px;
+    background: #FFFFFF;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    grid-area: aside;
+    gap: 18px;
+}
+
+aside a {
+    font-family: Ubuntu;
+    display: inline-flex;
+    text-decoration: none;    
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    text-align: left;
+    color: #000000;
+}
+
+aside a img {
+    margin-right: 18px;
+}
+
+aside a i {
+    margin-right: 18px;
+    font-size: 26px;
+}
+
+/*-------------------------------------------------*/
+/* =  3.Bloco Main
+/*-------------------------------------------------*/
+main {
+    display: grid;
+    width: fit-content;
+    padding: 16px;
+    grid-area: main;
+    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    background-color: rgba(249, 249, 249, 1);
+}
+
+/*-------------------------------------------------*/
+/* =  Listagem de vídeos no grid
+/*-------------------------------------------------*/
+.videos {
+    display: flex;
+    padding: 8px;
+    flex-direction: column;
+    font-family: Ubuntu;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.videos .conteudo {
+    display: flex;
+    margin-top: 16px;
+    flex-direction: row;    
+}
+
+.videos .conteudo .descricao {
+    margin: 0 10px;
+}
+
+.videos h5 {
+    font-family: Ubuntu;
+    margin-bottom: 16px;
+    font-size: 19px;    
+    line-height: 20px;
+}
